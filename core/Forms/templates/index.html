@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Forms</title>
+</head>
+<body>
+    <div>
+        <form>
+    <div class = "container mt - 5">
+    <form enctype="multipart/form-data" class="col-6 mx-auto card p-3 shadow-lg" method="post">
+    {% csrf_token %}
+    <div class = "mb-3">
+    <label for="name" class = "form-label">Name</label>
+    <input text="text" id="student_name" name="student_name"><br>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label><br>
+        <input type="radio" id="male_gender" name="student_gender" value="male">
+        <label for="male_gender">Male</label><br>
+        <input type="radio" id="female_gender" name="student_gender" value="female">
+        <label for="female_gender">Female</label><br>
+    </div>
+    
+
+
+    <div class = "mb-3">
+    <label for="phone_No" class = "form-label">Phone Number</label>
+    <input type="text" id="student_phone_No" name="student_phone_No"><br>
+    </div>
+    <div class = "mb-3">
+    <label for="gmail" class = "form-label">Email</label>
+    <input type="email" id="student_gmail" name="student_gmail"><br>
+    </div>
+    <div class = "mb-3">
+    <label for="image" class = "form-label">Image</label>
+    <input type="file" id="student_image" name="student_image"><br>
+    </div>
+    <div class = "mb-3">
+    <label for="address" class = "form-label">Address</label>
+    <textarea id="student_faddress" name="student_address"></textarea><br>
+    </div>
+    <button type="submit" class = "btn btn-success">Submit</button>
+</form>
+</div>
+</form><br><br>
+
+<!--{{Students}}-->
+<p>Amount = Rs {{amount}}</p>
+<button type = "Submit" class = "btn btn-outline-success btn-block">Pay</button>
+</div>
+
+<!-- student_detail.html -->
+
+<!--
+<h1>{{ student.name }}</h1>
+<p>Gender: {{ student.gender }}</p>
+<p>Phone Number: {{ student.phone_No }}</p>
+<p>Email: {{ student.gmail }}</p>
+{% if student.image %}
+    <img src="{{ student.image.url }}" alt="Student Image">
+{% endif %}
+<p>Address: {{ student.address }}</p>-->
+
+</body>
+</html>
